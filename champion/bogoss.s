@@ -1,13 +1,13 @@
 .name "bogoss"
 .comment "I WILL CRUSH YOU"
 
-sti r1, %:machine_a_prout, %1
+sti r1, %:bubble_machine, %1
 ld %42, r2
 
 forking_loop:
-		fork %:machine_a_prout
+		fork %:bubble_machine
 		zjmp %:forking_loop
 
-machine_a_prout:
+bubble_machine:
 	live %42
-	zjmp %:machine_a_prout
+	zjmp %:bubble_machine
